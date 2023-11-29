@@ -1,0 +1,81 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-27T11:25:27.799Z",
+    "end": "2023-11-27T11:26:00.511Z",
+    "duration": 32712,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f7e7c6a4-1206-45fd-b522-ab9b3e5e5551",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\test1.cy.ts",
+      "file": "cypress\\e2e\\tests\\test1.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Amazon test",
+          "fullTitle": "Amazon test",
+          "timedOut": null,
+          "duration": 29179,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.amazon.in/');\ncy.wait(10000);\ncy.getCookies().should('not.be.empty');\ncy.clearCookies();\ncy.getCookies().should('be.empty');\ncy.get('#nav-global-location-popover-link').click();\ncy.wait(10000);\ncy.get('[class=\"a-button-input\"]').click({ multiple: true, force: true });\nloginPage.enterUsername('0774401632');\nloginPage.continueToPassword();\nloginPage.enterPassword('SomePassword123!');\nloginPage.signInSubmit();",
+          "err": {},
+          "uuid": "dda71dc8-00f4-4f76-8a75-a7de11316586",
+          "parentUUID": "f7e7c6a4-1206-45fd-b522-ab9b3e5e5551",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "dda71dc8-00f4-4f76-8a75-a7de11316586"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 29179,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
